@@ -18,7 +18,7 @@ const ImageModal = ({ image, onClose }) => {
           alt={image.alt_description}
           width={500}
           height={100}
-          className="rounded-md lg:h-[450px] w-full"
+          className="rounded-md md:h-[450px] w-full"
         />
         <div className="mt-2 text-center">
           <h2 className="text-[16px] font-semibold text-black">{image.description || "Untitled"}</h2>
