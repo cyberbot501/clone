@@ -32,6 +32,7 @@ export default function Home() {
           onKeyDown={(e) => e.key === "Enter" && fetchImages(query, setImages, setLoading)}
           className="p-2 border rounded-md md:w-64 h-[40px] outline-none w-40 text-gray-600 "
         />
+        {/* Search button for larger screens */}
         <button
           onClick={() => fetchImages(query, setImages, setLoading)}
           className="ml-2 px-4 py-2 h-[40px] bg-black text-white rounded-md hidden md:block"  
@@ -39,6 +40,7 @@ export default function Home() {
           Search
         </button>
 
+            {/* Search icon button for smaller screens */}
         <button
           onClick={() => fetchImages(query, setImages, setLoading)}
           className="ml-2 px-4 py-2 h-[40px] w-11 bg-black text-white rounded-md md:hidden"
@@ -52,6 +54,7 @@ export default function Home() {
 
 
       {loading && <p>Loading...</p>}
+       {/* Masonry grid layout to display images */}
          <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
                 gutterBreakpoints={{350: "12px", 750: "16px", 900: "24px"}}
@@ -71,6 +74,8 @@ export default function Home() {
         ))}
           </Masonry>
           </ResponsiveMasonry>
+
+           {/* Image Modal: Display selected image */}
       {selectedImage && <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />}
     </div>
   );

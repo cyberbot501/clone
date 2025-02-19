@@ -13,6 +13,8 @@ const ImageModal = ({ image, onClose }) => {
         >
           Close
         </button>
+
+         {/* Display the image */}
         <Image
           src={image.urls.regular}
           alt={image.alt_description}
@@ -20,6 +22,8 @@ const ImageModal = ({ image, onClose }) => {
           height={100}
           className="rounded-md md:h-[450px] w-full"
         />
+
+        {/* Image description and author details */}
         <div className="mt-2 text-center">
           <h2 className="text-[16px] font-semibold text-black">{image.description || "Untitled"}</h2>
           <p className="text-gray-600">By {image.user.name}</p>

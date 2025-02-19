@@ -1,4 +1,8 @@
-const UNSPLASH_ACCESS_KEY = "fH37E1dHuANPCm3SKnzCjjZ_pDNC-YBVbiuFVlDAlBs"; 
+const UNSPLASH_ACCESS_KEY = "fH37E1dHuANPCm3SKnzCjjZ_pDNC-YBVbiuFVlDAlBs"; // Unsplash API access key
+
+
+
+// Function to fetch images based on the search query
 const fetchImages = async (query, setImages, setLoading) => {
   setLoading(true);
   try {
@@ -14,6 +18,8 @@ const fetchImages = async (query, setImages, setLoading) => {
   }
 };
 
+
+// Function to fetch default images (images that aren't search-specific)
 export const fetchDefaultImages = async (setImages, setLoading) => {
   setLoading(true);
   try {
