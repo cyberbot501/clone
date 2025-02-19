@@ -18,10 +18,10 @@ const ImageModal = ({ image, onClose }) => {
           alt={image.alt_description}
           width={500}
           height={100}
-          className="rounded-md h-[100%] w-full"
+          className="rounded-md lg:h-[500px] w-full"
         />
         <div className="mt-2 text-center">
-          <h2 className="text-xl font-semibold">{image.description || "Untitled"}</h2>
+          <h2 className="text-xl font-semibold text-black">{image.description || "Untitled"}</h2>
           <p className="text-gray-600">By {image.user.name}</p>
         </div>
       </div>
