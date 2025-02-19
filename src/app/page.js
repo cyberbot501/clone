@@ -22,7 +22,7 @@ export default function Home() {
 
      <div className="flex flex-row justify-between px-4 md:px-10 fixed h-[100px] w-[100%] bg-white items-center drop-shadow-2xl"> 
      <h1 className="text-sm md:text-3xl font-bold text-black mb-4">Xanotech Task</h1>
-      <div className="mb-4 flex md:flex-row flex-col  justify-center">
+      <div className="mb-4 flex flex-row  justify-center">
         <input
           type="text"
           placeholder="Search images..."
@@ -33,10 +33,19 @@ export default function Home() {
         />
         <button
           onClick={() => fetchImages(query, setImages, setLoading)}
-          className="ml-2 px-4 py-2 h-[40px] bg-black text-white rounded-md"
+          className="ml-2 px-4 py-2 h-[40px] bg-black text-white rounded-md hidden md:block"  
         >
           Search
         </button>
+
+        <button
+          onClick={() => fetchImages(query, setImages, setLoading)}
+          className="ml-2 px-4 py-2 h-[40px] w-11 bg-black text-white rounded-md md:hidden"
+        >
+          S
+        </button>
+
+
       </div>
      </div>
 
