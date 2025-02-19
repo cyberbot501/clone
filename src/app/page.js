@@ -6,6 +6,7 @@ import Image from "next/image";
 import fetchImages, { fetchDefaultImages } from "../utils/api";
 import ImageModal from "../components/ImageModal";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import { FaSearch } from "react-icons/fa";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -42,7 +43,7 @@ export default function Home() {
           onClick={() => fetchImages(query, setImages, setLoading)}
           className="ml-2 px-4 py-2 h-[40px] w-11 bg-black text-white rounded-md md:hidden"
         >
-          S
+          <FaSearch />
         </button>
 
 
