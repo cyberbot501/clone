@@ -30,7 +30,7 @@ export default function Home() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && fetchImages(query, setImages, setLoading)}
-          className="p-2 border rounded-md md:w-64 h-[40px] outline-none w-40"
+          className="p-2 border rounded-md md:w-64 h-[40px] outline-none w-40 text-gray-600 "
         />
         <button
           onClick={() => fetchImages(query, setImages, setLoading)}
